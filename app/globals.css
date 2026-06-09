@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans), 'Inter', 'Noto Sans', system-ui, 'Segoe UI', Arial, sans-serif;
+}
+body.lang-hi {
+  font-family: 'Noto Sans Devanagari', 'Inter', system-ui, Arial, sans-serif;
+}
+
+/* Large, accessible range sliders */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  border-radius: 9999px;
+  background: #d4f5e7;
+  outline: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #0f9d6e;
+  cursor: pointer;
+  border: 4px solid #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+}
+input[type='range']::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #0f9d6e;
+  cursor: pointer;
+  border: 4px solid #fff;
+}
+
+.num-in {
+  font-variant-numeric: tabular-nums;
+}
+
+.fade {
+  animation: f 0.35s ease;
+}
+@keyframes f {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+::selection {
+  background: #d4f5e7;
+}
